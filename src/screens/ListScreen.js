@@ -15,6 +15,7 @@ const ListScreen = () => {
 
     return (
         <FlatList
+            horizontal = {true}
             keyExtractor={friend => friend.name}
             data={friends}
             renderItem={({ item }) => {
@@ -26,7 +27,9 @@ const ListScreen = () => {
 
 const styles = StyleSheet.create({
     heading:{
-        fontSize:15
+        fontSize: 15,
+        marginVertical: 50,
+        marginEnd: 10
     }
 })
 
