@@ -3,27 +3,31 @@ import { View, Text, StyleSheet, FlatList } from 'react-native'
 
 const ListScreen = () => {
     const friends = [
-        { name: 'Ishaan' },
-        { name: 'Sidhi' },
-        { name: 'Satvik' },
-        { name: 'Vishant' },
-        { name: 'Sargam' },
-        { name: 'JJ' },
-        { name: 'Maddy' },
-        { name: 'Vibhuti' },
+        { name: 'Ishaan', key: '1' },
+        { name: 'Sidhi', key: '2' },
+        { name: 'Satvik', key: '3' },
+        { name: 'Vishant', key: '4' },
+        { name: 'Sargam', key: '5' },
+        { name: 'JJ', key: '6' },
+        { name: 'Maddy', key: '7' },
+        { name: 'Vibhuti', key: '8' },
     ]
 
     return (
         <FlatList
             data={friends}
             renderItem={({ item }) => {
-                return <Text>{item.name}</Text>
+                return <Text style={styles.heading}>{item.name}</Text>
             }}
         />
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    heading:{
+        fontSize:15
+    }
+})
 
 
 export default ListScreen
