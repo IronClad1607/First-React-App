@@ -3,12 +3,14 @@ import { Text, StyleSheet, View } from 'react-native'
 
 const ComponentsScreen = () => {
     const greeting = 'Bye there!'
+    const jsxVariable = <Text>I am IronClad</Text>
 
 
     return (<View>
         <Text style={styles.textStyle}>{greeting}</Text>
         <Text>Hi there</Text>
-    </View>);
+        {jsxVariable}
+    </View>)
 }
 
 const styles = StyleSheet.create({
