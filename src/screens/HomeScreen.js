@@ -1,14 +1,19 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, View, Button } from "react-native";
 
 const HomeScreen = () => {
-  return <Text style={styles.text}>Hi There !</Text>;
+  return (
+    <View>
+      <Text style={styles.text}>Hi There !</Text>
+      <Button title="Go To Components Demo" onPress={() => console.log("Button Pressed")} />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30
-  }
+    fontSize: 30,
+  },
 });
 
 export default HomeScreen;
