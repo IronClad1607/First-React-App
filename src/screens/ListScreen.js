@@ -3,24 +3,26 @@ import { View, Text, StyleSheet, FlatList } from "react-native";
 
 const ListScreen = () => {
   const friends = [
-    { name: "Ishaan" },
-    { name: "Sidhi" },
-    { name: "Satvik" },
-    { name: "Vishant" },
-    { name: "Sargam" },
-    { name: "JJ" },
-    { name: "Maddy" },
-    { name: "Vibhuti" },
+    { name: "Ishaan", age: 21 },
+    { name: "Sidhi", age: 22 },
+    { name: "Satvik", age: 22 },
+    { name: "Vishant", age: 21 },
+    { name: "Sargam", age: 22 },
+    { name: "JJ", age: 21 },
+    { name: "Maddy", age: 21 },
+    { name: "Vibhuti", age: 21 },
   ];
 
   return (
     <FlatList
-      horizontal={true}
-      showsHorizontalScrollIndicator={false}
       keyExtractor={(friend) => friend.name}
       data={friends}
       renderItem={({ item }) => {
-        return <Text style={styles.heading}>{item.name}</Text>;
+        return (
+          <Text style={styles.heading}>
+            {item.name} - Age {item.age}
+          </Text>
+        );
       }}
     />
   );
