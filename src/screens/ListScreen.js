@@ -1,37 +1,37 @@
-import React from 'react'
-import { View, Text, StyleSheet, FlatList } from 'react-native'
+import React from "react";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 
 const ListScreen = () => {
-    const friends = [
-        { name: 'Ishaan' },
-        { name: 'Sidhi' },
-        { name: 'Satvik' },
-        { name: 'Vishant' },
-        { name: 'Sargam' },
-        { name: 'JJ' },
-        { name: 'Maddy' },
-        { name: 'Vibhuti' }
-    ]
+  const friends = [
+    { name: "Ishaan" },
+    { name: "Sidhi" },
+    { name: "Satvik" },
+    { name: "Vishant" },
+    { name: "Sargam" },
+    { name: "JJ" },
+    { name: "Maddy" },
+    { name: "Vibhuti" },
+  ];
 
-    return (
-        <FlatList
-            horizontal = {true}
-            keyExtractor={friend => friend.name}
-            data={friends}
-            renderItem={({ item }) => {
-                return <Text style={styles.heading}>{item.name}</Text>
-            }}
-        />
-    )
-}
+  return (
+    <FlatList
+      horizontal={true}
+      showsHorizontalScrollIndicator={false}
+      keyExtractor={(friend) => friend.name}
+      data={friends}
+      renderItem={({ item }) => {
+        return <Text style={styles.heading}>{item.name}</Text>;
+      }}
+    />
+  );
+};
 
 const styles = StyleSheet.create({
-    heading:{
-        fontSize: 15,
-        marginVertical: 50,
-        marginEnd: 10
-    }
-})
+  heading: {
+    fontSize: 15,
+    marginVertical: 50,
+    marginEnd: 10,
+  },
+});
 
-
-export default ListScreen
+export default ListScreen;
